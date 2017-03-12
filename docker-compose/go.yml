@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  gocode:
+    image: golang:latest
+    volumes:
+     - "${HOME}/code/gocode:/go/src/github.com/tushar00jain/gocode"
+    working_dir: /go/src/github.com/tushar00jain/gocode
+    ports:
+     - "8000:8000"
+     - "8080:8080"
+    entrypoint: /bin/bash
